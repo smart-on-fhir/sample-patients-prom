@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "start": "DEBUG='*' node .",
     "test": "nodeunit",
     "clean": "rm -f out/*/*.json"
   },
