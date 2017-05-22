@@ -222,6 +222,9 @@ async function parseResourcesCsv(type) {
     );
 }
 
+/**
+ * Sequentially parse all the CSV files that are found in CFG.types
+ */
 async function parseAllCSVFiles() {
     debugLog("Parsing CSV files".bold + " ... ", "test");
     let out = {};
