@@ -7,6 +7,7 @@ const trxTemplate = require("./templates/Transaction.js");
 const request     = require("request");
 const EOL         = /\r\n|\n|\r/;
 const CSV_LINE    = /[^\s,]/; // matches non-empty lines
+const CSV_COMMENT = /^#/;
 const BASE        = Path.join(__dirname, "..");
 const INPUT_DIR   = Path.join(BASE, "input_files");
 
@@ -28,7 +29,7 @@ function debugLog(msg, group="*"/*, severity="debug"*/) {
 
 /**
  * Promisified version of FS.writeFile.
- * @param {String|Buffer|Integer} file filename or file descriptor
+ * @param {String|Buffer|number} file filename or file descriptor
  * @param {String|Buffer} data File contents
  * @param {Object|String} options The options accepted by FS.writeFile
  */
@@ -46,7 +47,7 @@ function writeFile(file, data, options={}) {
 
 /**
  * Promisified version of FS.readFile.
- * @param {String|Buffer|Integer} file filename or file descriptor
+ * @param {String|Buffer|number} file filename or file descriptor
  * @param {String|Buffer} data File contents
  * @param {Object|String} options The options accepted by FS.writeFile
  */
@@ -73,7 +74,7 @@ function readFile(file, options={}) {
  */
 async function getCSVLines(csvFilePath, skip=0) {
     return (await readFile(csvFilePath, "utf8")).split(EOL).slice(skip).filter(
-        line => CSV_LINE.test(line)
+        line => CSV_LINE.test(line) && !CSV_COMMENT.test(line)
     );
 }
 
@@ -285,7 +286,9 @@ function createQuestionnaires() {
         "QuestionnaireSMART-PROMs-QUE1.json",
         "QuestionnaireSMART-PROMs-QUE2.json",
         "QuestionnaireSMART-PROMs-QUE3.json",
-        "QuestionnaireSMART-PROMs-QUE4.json"
+        "QuestionnaireSMART-PROMs-QUE4.json",
+        "QuestionnaireSMART-PROMs-QUE5.json",
+        "QuestionnaireSMART-PROMs-QUE6.json",
     ];
     let length = names.length
     names.forEach((name, idx) => {
@@ -367,7 +370,7 @@ function parse() {
     .then(structure => {
         return createQuestionnaires()
             .then(() => writeTransactions(structure))
-            .then(trxs => sendTransactions(trxs))
+            .then(transactions => sendTransactions(transactions))
             .then(() => structure)
     })
 }

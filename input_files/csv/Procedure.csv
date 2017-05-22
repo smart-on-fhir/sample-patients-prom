@@ -1,28 +1,127 @@
-﻿Id,status,Code  ,    ,       ,subject  ,       ,Performed        ,Encounter,
-  ,      ,Coding,    ,       ,Reference,Display,performedDateTime,reference,
-  ,      ,system,code,display,         ,       ,                 ,         ,
-SMART-PROMs-1-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-1,Michelle Schmidt,2015-07-12,Encounter/SMART-PROMs-1-ENC1,
-SMART-PROMs-2-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-2,Angela Wagner,2015-04-28,Encounter/SMART-PROMs-2-ENC1,
-SMART-PROMs-3-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-3,Joyce Warren,2015-09-21,Encounter/SMART-PROMs-3-ENC1,
-SMART-PROMs-4-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-4,Diana Ward,2016-03-04,Encounter/SMART-PROMs-4-ENC1,
-SMART-PROMs-5-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-5,Janet Morales,2016-03-06,Encounter/SMART-PROMs-5-ENC1,
-SMART-PROMs-6-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-6,Robin Matthews,2016-02-14,Encounter/SMART-PROMs-6-ENC1,
-SMART-PROMs-7-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-7,Barbara Fox,2015-10-20,Encounter/SMART-PROMs-7-ENC1,
-SMART-PROMs-8-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-8,Judith Fernandez,2016-03-05,Encounter/SMART-PROMs-8-ENC1,
-SMART-PROMs-9-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-9,Joan Long,2016-02-25,Encounter/SMART-PROMs-9-ENC1,
-SMART-PROMs-10-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-10,Laura Cook,2015-06-04,Encounter/SMART-PROMs-10-ENC1,
-SMART-PROMs-11-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-11,Kathy Hall,2015-05-17,Encounter/SMART-PROMs-11-ENC1,
-SMART-PROMs-12-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-12,Betty Nichols,2015-11-09,Encounter/SMART-PROMs-12-ENC1,
-SMART-PROMs-13-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-13,Jeffrey Phillips,2016-01-18,Encounter/SMART-PROMs-13-ENC1,
-SMART-PROMs-14-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-14,Ryan Cox,2016-03-31,Encounter/SMART-PROMs-14-ENC1,
-SMART-PROMs-15-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-15,Sean Hansen,2015-05-01,Encounter/SMART-PROMs-15-ENC1,
-SMART-PROMs-16-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-16,Joshua Foster,2015-10-10,Encounter/SMART-PROMs-16-ENC1,
-SMART-PROMs-17-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-17,Todd Alvarez,2015-06-30,Encounter/SMART-PROMs-17-ENC1,
-SMART-PROMs-18-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-18,Joe Carter,2015-06-14,Encounter/SMART-PROMs-18-ENC1,
-SMART-PROMs-19-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-19,Wayne Mendoza,2015-08-22,Encounter/SMART-PROMs-19-ENC1,
-SMART-PROMs-20-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-20,Randy Fuller,2015-07-11,Encounter/SMART-PROMs-20-ENC1,
-SMART-PROMs-21-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-21,Matthew Powell,2015-10-19,Encounter/SMART-PROMs-21-ENC1,
-SMART-PROMs-22-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-22,Terry Hunt,2016-01-19,Encounter/SMART-PROMs-22-ENC1,
-SMART-PROMs-23-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-23,Benjamin Reyes,2015-10-27,Encounter/SMART-PROMs-23-ENC1,
-SMART-PROMs-24-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-24,Howard Griffin,2015-08-17,Encounter/SMART-PROMs-24-ENC1,
-SMART-PROMs-25-PRO1,completed,http://snomed.info,52734007,Total replacement of hip (procedure),Patient/SMART-PROMs-25,Dennis Bryant,2016-01-17,Encounter/SMART-PROMs-25-ENC1,
+﻿Id                 , status   , Code              ,                   ,                                     , subject               ,                   , Performed                   , Encounter
+                   ,          , Coding            ,                   ,                                     , Reference             , Display           , performedDateTime           , reference
+                   ,          , system            , code              , display                             ,                       ,                   ,                             ,
+# Hip Resources                                                                                                                                                                                              
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+#  ID              | status   | Code.Coding.system | Code.Coding.code | Code.Coding.display                 | subject.Reference     | subject.Display   | Performed.performedDateTime | Encounter.reference          |
+#  0               | 1        | 2                  | 3                | 4                                   | 5                     | 6                 | 7                           | 8                            |
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+SMART-PROMs-1-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-1 , Michelle Schmidt  , 2015-07-12                  , Encounter/SMART-PROMs-1-ENC1
+SMART-PROMs-2-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-2 , Angela Wagner     , 2015-04-28                  , Encounter/SMART-PROMs-2-ENC1
+SMART-PROMs-3-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-3 , Joyce Warren      , 2015-09-21                  , Encounter/SMART-PROMs-3-ENC1
+SMART-PROMs-4-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-4 , Diana Ward        , 2016-03-04                  , Encounter/SMART-PROMs-4-ENC1
+SMART-PROMs-5-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-5 , Janet Morales     , 2016-03-06                  , Encounter/SMART-PROMs-5-ENC1
+SMART-PROMs-6-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-6 , Robin Matthews    , 2016-02-14                  , Encounter/SMART-PROMs-6-ENC1
+SMART-PROMs-7-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-7 , Barbara Fox       , 2015-10-20                  , Encounter/SMART-PROMs-7-ENC1
+SMART-PROMs-8-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-8 , Judith Fernandez  , 2016-03-05                  , Encounter/SMART-PROMs-8-ENC1
+SMART-PROMs-9-PRO1 , completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-9 , Joan Long         , 2016-02-25                  , Encounter/SMART-PROMs-9-ENC1
+SMART-PROMs-10-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-10, Laura Cook        , 2015-06-04                  , Encounter/SMART-PROMs-10-ENC1
+SMART-PROMs-11-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-11, Kathy Hall        , 2015-05-17                  , Encounter/SMART-PROMs-11-ENC1
+SMART-PROMs-12-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-12, Betty Nichols     , 2015-11-09                  , Encounter/SMART-PROMs-12-ENC1
+SMART-PROMs-13-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-13, Jeffrey Phillips  , 2016-01-18                  , Encounter/SMART-PROMs-13-ENC1
+SMART-PROMs-14-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-14, Ryan Cox          , 2016-03-31                  , Encounter/SMART-PROMs-14-ENC1
+SMART-PROMs-15-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-15, Sean Hansen       , 2015-05-01                  , Encounter/SMART-PROMs-15-ENC1
+SMART-PROMs-16-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-16, Joshua Foster     , 2015-10-10                  , Encounter/SMART-PROMs-16-ENC1
+SMART-PROMs-17-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-17, Todd Alvarez      , 2015-06-30                  , Encounter/SMART-PROMs-17-ENC1
+SMART-PROMs-18-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-18, Joe Carter        , 2015-06-14                  , Encounter/SMART-PROMs-18-ENC1
+SMART-PROMs-19-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-19, Wayne Mendoza     , 2015-08-22                  , Encounter/SMART-PROMs-19-ENC1
+SMART-PROMs-20-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-20, Randy Fuller      , 2015-07-11                  , Encounter/SMART-PROMs-20-ENC1
+SMART-PROMs-21-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-21, Matthew Powell    , 2015-10-19                  , Encounter/SMART-PROMs-21-ENC1
+SMART-PROMs-22-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-22, Terry Hunt        , 2016-01-19                  , Encounter/SMART-PROMs-22-ENC1
+SMART-PROMs-23-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-23, Benjamin Reyes    , 2015-10-27                  , Encounter/SMART-PROMs-23-ENC1
+SMART-PROMs-24-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-24, Howard Griffin    , 2015-08-17                  , Encounter/SMART-PROMs-24-ENC1
+SMART-PROMs-25-PRO1, completed, http://snomed.info , 52734007         , Total replacement of hip (procedure), Patient/SMART-PROMs-25, Dennis Bryant     , 2016-01-17                  , Encounter/SMART-PROMs-25-ENC1
+
+# Knee Resources                                                                                                                                                                                              
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+#  ID              | status   | Code.Coding.system | Code.Coding.code | Code.Coding.display                 | subject.Reference     | subject.Display   | Performed.performedDateTime | Encounter.reference          |
+#  0               | 1        | 2                  | 3                | 4                                   | 5                     | 6                 | 7                           | 8                            |
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+SMART-PROMs-26-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-26, Judith Oliver     ,2015-07-17                   , Encounter/SMART-PROMs-26-ENC1
+SMART-PROMs-27-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-27, Linda Harris      ,2015-06-26                   , Encounter/SMART-PROMs-27-ENC1
+SMART-PROMs-28-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-28, Amy Morales       ,2015-08-18                   , Encounter/SMART-PROMs-28-ENC1
+SMART-PROMs-29-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-29, Lillian Ortiz     ,2015-09-02                   , Encounter/SMART-PROMs-29-ENC1
+SMART-PROMs-30-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-30, Anne Cunningham   ,2016-03-12                   , Encounter/SMART-PROMs-30-ENC1
+SMART-PROMs-31-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-31, Linda Coleman     ,2015-06-13                   , Encounter/SMART-PROMs-31-ENC1
+SMART-PROMs-32-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-32, Janet Rivera      ,2016-03-20                   , Encounter/SMART-PROMs-32-ENC1
+SMART-PROMs-33-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-33, Paula Palmer      ,2015-05-23                   , Encounter/SMART-PROMs-33-ENC1
+SMART-PROMs-34-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-34, Mildred Ward      ,2016-01-09                   , Encounter/SMART-PROMs-34-ENC1
+SMART-PROMs-35-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-35, Jacqueline Gray   ,2015-06-23                   , Encounter/SMART-PROMs-35-ENC1
+SMART-PROMs-36-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-36, Kathryn Johnson   ,2015-05-28                   , Encounter/SMART-PROMs-36-ENC1
+SMART-PROMs-37-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-37, Julia Baker       ,2015-07-24                   , Encounter/SMART-PROMs-37-ENC1
+SMART-PROMs-38-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-38, Andrew Gibson     ,2015-12-21                   , Encounter/SMART-PROMs-38-ENC1
+SMART-PROMs-39-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-39, Harold Stevens    ,2015-09-13                   , Encounter/SMART-PROMs-39-ENC1
+SMART-PROMs-40-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-40, Robert Ross       ,2015-08-23                   , Encounter/SMART-PROMs-40-ENC1
+SMART-PROMs-41-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-41, Jonathan Fisher   ,2016-03-27                   , Encounter/SMART-PROMs-41-ENC1
+SMART-PROMs-42-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-42, Walter Dunn       ,2015-05-23                   , Encounter/SMART-PROMs-42-ENC1
+SMART-PROMs-43-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-43, Samuel Roberts    ,2015-05-29                   , Encounter/SMART-PROMs-43-ENC1
+SMART-PROMs-44-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-44, Martin Bennett    ,2016-02-13                   , Encounter/SMART-PROMs-44-ENC1
+SMART-PROMs-45-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-45, Arthur Carr       ,2015-07-21                   , Encounter/SMART-PROMs-45-ENC1
+SMART-PROMs-46-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-46, Fred Harvey       ,2016-01-01                   , Encounter/SMART-PROMs-46-ENC1
+SMART-PROMs-47-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-47, Louis Franklin    ,2015-08-23                   , Encounter/SMART-PROMs-47-ENC1
+SMART-PROMs-48-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-48, George Garza      ,2015-09-19                   , Encounter/SMART-PROMs-48-ENC1
+SMART-PROMs-49-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-49, George Garrett    ,2015-11-13                   , Encounter/SMART-PROMs-49-ENC1
+SMART-PROMs-50-PRO1, completed, http://snomed.info , 609588000        , Total knee replacement (procedure)  , Patient/SMART-PROMs-50, Carl Russell      ,2015-11-01                   , Encounter/SMART-PROMs-50-ENC1
+
+# Vein Resources                                                                                                                                                                                              
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+#  ID              | status   | Code.Coding.system | Code.Coding.code | Code.Coding.display                 | subject.Reference     | subject.Display   | Performed.performedDateTime | Encounter.reference          |
+#  0               | 1        | 2                  | 3                | 4                                   | 5                     | 6                 | 7                           | 8                            |
+# -----------------+----------+--------------------+------------------+-------------------------------------+-----------------------+-------------------+-----------------------------+------------------------------+
+SMART-PROMs-51-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-51, Marilyn Arnold    , 2015-06-01                  , Encounter/SMART-PROMs-51-ENC1
+SMART-PROMs-52-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-52, Jacqueline Mendoza, 2015-08-29                  , Encounter/SMART-PROMs-52-ENC1
+SMART-PROMs-53-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-53, Mildred Rivera    , 2015-04-13                  , Encounter/SMART-PROMs-53-ENC1
+SMART-PROMs-54-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-54, Lori Murphy       , 2015-09-29                  , Encounter/SMART-PROMs-54-ENC1
+SMART-PROMs-55-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-55, Rebecca Palmer    , 2015-10-06                  , Encounter/SMART-PROMs-55-ENC1
+SMART-PROMs-56-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-56, Ruby Woods        , 2016-01-13                  , Encounter/SMART-PROMs-56-ENC1
+SMART-PROMs-57-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-57, Anna Weaver       , 2015-05-07                  , Encounter/SMART-PROMs-57-ENC1
+SMART-PROMs-58-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-58, Mildred Ferguson  , 2015-06-23                  , Encounter/SMART-PROMs-58-ENC1
+SMART-PROMs-59-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-59, Norma Hernandez   , 2015-11-08                  , Encounter/SMART-PROMs-59-ENC1
+SMART-PROMs-60-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-60, Lois Welch        , 2016-01-14                  , Encounter/SMART-PROMs-60-ENC1
+SMART-PROMs-61-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-61, Martha Rice       , 2016-02-04                  , Encounter/SMART-PROMs-61-ENC1
+SMART-PROMs-62-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-62, Gloria Adams      , 2015-04-21                  , Encounter/SMART-PROMs-62-ENC1
+SMART-PROMs-63-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-63, Jesse Burke       , 2016-02-06                  , Encounter/SMART-PROMs-63-ENC1
+SMART-PROMs-64-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-64, Wayne Patterson   , 2016-01-18                  , Encounter/SMART-PROMs-64-ENC1
+SMART-PROMs-65-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-65, Johnny Stewart    , 2015-09-25                  , Encounter/SMART-PROMs-65-ENC1
+SMART-PROMs-66-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-66, Edward Ramirez    , 2015-10-08                  , Encounter/SMART-PROMs-66-ENC1
+SMART-PROMs-67-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-67, Steven Flores     , 2016-03-25                  , Encounter/SMART-PROMs-67-ENC1
+SMART-PROMs-68-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-68, Gregory Crawford  , 2015-09-23                  , Encounter/SMART-PROMs-68-ENC1
+SMART-PROMs-69-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-69, Justin Bishop     , 2016-03-02                  , Encounter/SMART-PROMs-69-ENC1
+SMART-PROMs-70-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-70, Phillip Watson    , 2015-11-09                  , Encounter/SMART-PROMs-70-ENC1
+SMART-PROMs-71-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-71, Roy Spencer       , 2015-07-12                  , Encounter/SMART-PROMs-71-ENC1
+SMART-PROMs-72-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-72, Ralph Brooks      , 2015-10-03                  , Encounter/SMART-PROMs-72-ENC1
+SMART-PROMs-73-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-73, Russell George    , 2015-11-02                  , Encounter/SMART-PROMs-73-ENC1
+SMART-PROMs-74-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-74, Edward Watkins    , 2015-05-18                  , Encounter/SMART-PROMs-74-ENC1
+SMART-PROMs-75-PRO1, completed, http://snomed.info , 274023003        , Varicose vein operation (procedure) , Patient/SMART-PROMs-75, Russell Dixon     , 2016-03-26                  , Encounter/SMART-PROMs-75-ENC1
+
+# Groin Resources                                                                                                                                                                                              
+# -----------------+----------+--------------------+------------------+--------------------------------------+------------------------+--------------------+-----------------------------+------------------------------+
+#  ID              | status   | Code.Coding.system | Code.Coding.code | Code.Coding.display                  | subject.Reference      | subject.Display    | Performed.performedDateTime | Encounter.reference          |
+#  0               | 1        | 2                  | 3                | 4                                    | 5                      | 6                  | 7                           | 8                            |
+# -----------------+----------+--------------------+------------------+--------------------------------------+------------------------+--------------------+-----------------------------+------------------------------+
+SMART-PROMs-76-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-76 , Larry Spencer      , 2015-05-12                  , Encounter/SMART-PROMs-76-ENC1
+SMART-PROMs-77-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-77 , Andrew Fields      , 2016-02-11                  , Encounter/SMART-PROMs-77-ENC1
+SMART-PROMs-78-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-78 , Martin Reyes       , 2015-11-19                  , Encounter/SMART-PROMs-78-ENC1
+SMART-PROMs-79-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-79 , Adam Green         , 2015-11-24                  , Encounter/SMART-PROMs-79-ENC1
+SMART-PROMs-80-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-80 , Wayne Perry        , 2015-12-09                  , Encounter/SMART-PROMs-80-ENC1
+SMART-PROMs-81-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-81 , Antonio Rodriguez  , 2015-11-26                  , Encounter/SMART-PROMs-81-ENC1
+SMART-PROMs-82-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-82 , Andrew Watson      , 2015-07-24                  , Encounter/SMART-PROMs-82-ENC1
+SMART-PROMs-83-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-83 , Willie Moreno      , 2016-03-27                  , Encounter/SMART-PROMs-83-ENC1
+SMART-PROMs-84-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-84 , Steve Morgan       , 2015-04-19                  , Encounter/SMART-PROMs-84-ENC1
+SMART-PROMs-85-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-85 , Earl Ferguson      , 2016-02-21                  , Encounter/SMART-PROMs-85-ENC1
+SMART-PROMs-86-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-86 , Antonio Fisher     , 2015-10-17                  , Encounter/SMART-PROMs-86-ENC1
+SMART-PROMs-87-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-87 , Willie Hayes       , 2015-06-21                  , Encounter/SMART-PROMs-87-ENC1
+SMART-PROMs-88-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-88 , Walter Webb        , 2015-05-27                  , Encounter/SMART-PROMs-88-ENC1
+SMART-PROMs-89-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-89 , Patrick Wheeler    , 2015-07-15                  , Encounter/SMART-PROMs-89-ENC1
+SMART-PROMs-90-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-90 , Jack Wallace       , 2015-05-22                  , Encounter/SMART-PROMs-90-ENC1
+SMART-PROMs-91-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-91 , Aaron Gardner      , 2015-05-31                  , Encounter/SMART-PROMs-91-ENC1
+SMART-PROMs-92-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-92 , Peter Hansen       , 2015-12-09                  , Encounter/SMART-PROMs-92-ENC1
+SMART-PROMs-93-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-93 , Daniel Coleman     , 2015-05-11                  , Encounter/SMART-PROMs-93-ENC1
+SMART-PROMs-94-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-94 , Kevin Stevens      , 2015-07-19                  , Encounter/SMART-PROMs-94-ENC1
+SMART-PROMs-95-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-95 , Benjamin Porter    , 2015-12-24                  , Encounter/SMART-PROMs-95-ENC1
+SMART-PROMs-96-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-96 , Russell Jacobs     , 2016-02-06                  , Encounter/SMART-PROMs-96-ENC1
+SMART-PROMs-97-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-97 , Christopher Daniels, 2015-09-06                  , Encounter/SMART-PROMs-97-ENC1
+SMART-PROMs-98-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-98 , Richard Rose       , 2015-12-10                  , Encounter/SMART-PROMs-98-ENC1
+SMART-PROMs-99-PRO1 ,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-99 , Roy Lawson         , 2015-11-06                  , Encounter/SMART-PROMs-99-ENC1
+SMART-PROMs-100-PRO1,completed, http://snomed.info , 44558001         , Repair of inguinal hernia (procedure), Patient/SMART-PROMs-100, Jose Burke         , 2015-11-25                  , Encounter/SMART-PROMs-100-ENC1
+

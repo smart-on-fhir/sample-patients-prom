@@ -67,6 +67,30 @@ module.exports = {
             template  : require("./templates/QuestionnaireResponse.js"),
             source    : "input_files/csv/QuestionnaireResponse OHS PostOp.csv",
             write     : true
+        },
+        QuestionnaireResponseOKSPreOp: {
+            csvHeaders: 6,
+            template  : require("./templates/QuestionnaireResponse.js"),
+            source    : "input_files/csv/QR-OKS Pre-op.csv",
+            write     : true
+        },
+        QuestionnaireResponseOKSPostOp: {
+            csvHeaders: 6,
+            template  : require("./templates/QuestionnaireResponse.js"),
+            source    : "input_files/csv/QR-OKS Post-op.csv",
+            write     : true
+        },
+        QRAVVQPreOp: {
+            csvHeaders: 6,
+            template  : require("./templates/QuestionnaireResponse.js"),
+            source    : "input_files/csv/QR-AVVQ Pre-Op.csv",
+            write     : true
+        },
+        QRAVVQPostOp: {
+            csvHeaders: 6,
+            template  : require("./templates/QuestionnaireResponse.js"),
+            source    : "input_files/csv/QR-AVVQ Post-Op.csv",
+            write     : true
         }
     }
 };

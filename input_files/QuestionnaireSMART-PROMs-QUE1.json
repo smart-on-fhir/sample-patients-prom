@@ -233,7 +233,7 @@
                     },
                     {
                         "linkId": "Symptom Period",
-                        "text": "For how long have you had problems with the knee on which you are about to have surgery?",
+                        "text": "For how long have you had problems with the body part on which you are about to have surgery?",
                         "type": "choice",
                         "required": true,
                         "options": {

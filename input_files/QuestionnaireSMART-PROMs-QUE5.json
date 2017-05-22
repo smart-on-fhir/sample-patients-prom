@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "bundle-request-insert-questionnaire-SMART-PROMs-QUE4",
+    "id": "bundle-request-insert-questionnaire-SMART-PROMs-QUE6",
     "type": "transaction",
     "entry": [
         {
@@ -84,50 +84,6 @@
                                 {
                                     "code": "0",
                                     "display": "Every night"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "PUT",
-                "url"   : "ValueSet/SMART-PROMs-VS15"
-            },
-            "resource": {
-                "resourceType": "ValueSet",
-                "id": "SMART-PROMs-VS15",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "PainDays"
-                },
-                "status": "draft",
-                "compose": {
-                    "include": [
-                        {
-                            "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                            "concept": [
-                                {
-                                    "code": "4",
-                                    "display": "No days"
-                                },
-                                {
-                                    "code": "3",
-                                    "display": "Only 1 or 2 days"
-                                },
-                                {
-                                    "code": "2",
-                                    "display": "Some days"
-                                },
-                                {
-                                    "code": "1",
-                                    "display": "Most days"
-                                },
-                                {
-                                    "code": "0",
-                                    "display": "Every day"
                                 }
                             ]
                         }
@@ -402,66 +358,98 @@
         {
             "request": {
                 "method": "PUT",
-                "url"   : "Questionnaire/SMART-PROMs-QUE4"
+                "url"   : "Questionnaire/SMART-PROMs-QUE5"
             },
             "resource": {
                 "resourceType": "Questionnaire",
-                "id": "SMART-PROMs-QUE4",
+                "id": "SMART-PROMs-QUE5",
                 "identifier": [
-                {
-                    "use": "official",
-                    "system": "https://innovation.ox.ac.uk/outcome-measures/oxford-hip-score-ohs/",
-                    "value": "The Oxford Hip Score (OHS)"
-                }
+                    {
+                        "use": "official",
+                        "system": "https://innovation.ox.ac.uk/outcome-measures/oxford-hip-score-ohs/",
+                        "value": "The Oxford Knee Score (OKS)"
+                    }
                 ],
                 "status": "active",
                 "item": [
                     {
                         "linkId": "Usual pain",
-                        "text": "How would you describe the pain you usually have in your hip?",
+                        "text": "How would you describe the pain you usually have in your knee?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS13"
-                        }
-                    },
-                    {
-                        "linkId": "Sudden pain",
-                        "text": "Have you had any sudden, severe pain (shooting, stabbing, or spasms) from your affected hip?",
-                        "type": "choice",
-                        "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS15"
+                        "reference": "ValueSet/SMART-PROMs-VS13"
                         }
                     },
                     {
                         "linkId": "Night pain",
-                        "text": "Have you been troubled by pain from your hip in bed at night?",
+                        "text": "Have you been troubled by pain from your knee in bed at night?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS14"
+                        "reference": "ValueSet/SMART-PROMs-VS14"
                         }
                     },
                     {
                         "linkId": "Washing",
-                        "text": "Have you had any trouble with washing and drying yourself (all over) because of your hip?",
+                        "text": "Have you had any trouble with washing and drying yourself (all over) because of your knee?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS20"
+                        "reference": "ValueSet/SMART-PROMs-VS20"
                         }
                     },
                     {
                         "linkId": "Transportation",
-                        "text": "Have you had any trouble getting in and out of a car or using public transportation because of your hip?",
+                        "text": "Have you had any trouble getting in and out of a car or using public transportation because of your knee?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS20"
+                        "reference": "ValueSet/SMART-PROMs-VS20"
                         }
                     },
                     {
-                        "linkId": "Dressing",
-                        "text": "Have you been able to put on a pair of socks, stockings or tights?",
+                        "linkId": "Walking",
+                        "text": "For how long have you been able to walk before the pain in your knee becomes severe (with or without a walking aid)?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS18"
+                        "reference": "ValueSet/SMART-PROMs-VS17"
+                        }
+                    },
+                    {
+                        "linkId": "Standing up",
+                        "text": "After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your knee?",
+                        "type": "choice",
+                        "options": {
+                        "reference": "ValueSet/SMART-PROMs-VS19"
+                        }
+                    },
+                    {
+                        "linkId": "Limping",
+                        "text": "Have you been limping when walking because of your knee?",
+                        "type": "choice",
+                        "options": {
+                        "reference": "ValueSet/SMART-PROMs-VS16"
+                        }
+                    },
+                    {
+                        "linkId": "Kneeling",
+                        "text": "If you were to kneel down could you stand up afterwards?",
+                        "type": "choice",
+                        "options": {
+                        "reference": "ValueSet/SMART-PROMs-VS18"
+                        }
+                    },
+                    {
+                        "linkId": "Usual work",
+                        "text": "How much has pain from your knee interfered with your usual work, including housework?",
+                        "type": "choice",
+                        "options": {
+                        "reference": "ValueSet/SMART-PROMs-VS21"
+                        }
+                    },
+                    {
+                        "linkId": "Confidence",
+                        "text": "Have you felt that your knee might suddenly give way or let you down?",
+                        "type": "choice",
+                        "options": {
+                        "reference": "ValueSet/SMART-PROMs-VS16"
                         }
                     },
                     {
@@ -469,52 +457,20 @@
                         "text": "Could you do the household shopping on your own?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS18"
-                        }
-                    },
-                    {
-                        "linkId": "Walking",
-                        "text": "For how long have you been able to walk before the pain in your hip becomes severe (with or without a walking aid)?",
-                        "type": "choice",
-                        "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS17"
-                        }
-                    },
-                    {
-                        "linkId": "Limping",
-                        "text": "Have you been limping when walking because of your hip?",
-                        "type": "choice",
-                        "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS16"
+                        "reference": "ValueSet/SMART-PROMs-VS18"
                         }
                     },
                     {
                         "linkId": "Stairs",
-                        "text": "Have you been able to climb a flight of stairs?",
+                        "text": "Have you been able to walk down a flight of stairs?",
                         "type": "choice",
                         "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS18"
-                        }
-                    },
-                    {
-                        "linkId": "Standing up",
-                        "text": "After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your hip?",
-                        "type": "choice",
-                        "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS19"
-                        }
-                    },
-                    {
-                        "linkId": "Usual work",
-                        "text": "How much has pain from your hip interfered with your usual work, including housework?",
-                        "type": "choice",
-                        "options": {
-                            "reference": "ValueSet/SMART-PROMs-VS21"
+                        "reference": "ValueSet/SMART-PROMs-VS18"
                         }
                     },
                     {
                         "linkId": "Score",
-                        "text": "Your Oxford Hip Score is",
+                        "text": "Your Oxford Knee Score is",
                         "type": "integer"
                     }
                 ]
