@@ -17,26 +17,26 @@
                         {
                             "system": "http://content.digital.nhs.uk/media/1361/HES-Hospital-Episode-Statistics-PROMS-Data-Dictionary/pdf/Proms_Data_Dictionary.pdf",
                             "concept": [
-                            {
-                                "code": "1",
-                                "display": "None at all"
-                            },
-                            {
-                                "code": "2",
-                                "display": "Between 1 and 5 days"
-                            },
-                            {
-                                "code": "3",
-                                "display": "Between 6 and 10 days"
-                            },
-                            {
-                                "code": "4",
-                                "display": "For more than 10 days"
-                            },
-                            {
-                                "code": "9",
-                                "display": "Missing"
-                            }
+                                {
+                                    "code": "1",
+                                    "display": "None at all"
+                                },
+                                {
+                                    "code": "2",
+                                    "display": "Between 1 and 5 days"
+                                },
+                                {
+                                    "code": "3",
+                                    "display": "Between 6 and 10 days"
+                                },
+                                {
+                                    "code": "4",
+                                    "display": "For more than 10 days"
+                                },
+                                {
+                                    "code": "9",
+                                    "display": "Missing"
+                                }
                             ]
                         }
                     ]
@@ -412,6 +412,7 @@
                     {
                         "linkId": "Painkillers",
                         "text": "During the last two weeks, on how many days did you take painkilling tablets for your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS22"
                         }
@@ -419,6 +420,7 @@
                     {
                         "linkId": "Swelling",
                         "text": "In the last two weeks, how much ankle swelling have you had?",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS26"
                         }
@@ -426,6 +428,7 @@
                     {
                         "linkId": "Concern",
                         "text": "Does the appearance of your varicose veins cause you concern",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS29"
                         }
@@ -433,6 +436,7 @@
                     {
                         "linkId": "Clothing",
                         "text": "Does the appearance of your varicose veins influence your choice of clothing including tights?",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS30"
                         }
@@ -440,6 +444,7 @@
                     {
                         "linkId": "Work",
                         "text": "During the last two weeks, have your varicose veins interfered with your work/housework or other activities?",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS27"
                         }
@@ -447,6 +452,7 @@
                     {
                         "linkId": "Leisure",
                         "text": "During the last two weeks, have your varicose veins interfered with you leisure activities? (including sport, hobbies and social life)",
+                        "type": "choice",
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS28"
                         }
@@ -464,6 +470,7 @@
                     {
                         "linkId": "PainDays-L",
                         "text": "In the last 2 weeks for how many days did your veins cause you pain or ache?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS22"
                         }
@@ -471,6 +478,7 @@
                     {
                         "linkId": "Support-L",
                         "text": "In the last two weeks, have you worn support stockings or tights?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS25"
                         }
@@ -478,6 +486,7 @@
                     {
                         "linkId": "Itch-L",
                         "text": "In the past two weeks, have you had any itching in association with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS23"
                         }
@@ -485,6 +494,7 @@
                     {
                         "linkId": "Discolor-L",
                         "text": "Do you have purple discoloration caused by tiny blood vessels in the skin, in association with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS6"
                         }
@@ -492,6 +502,7 @@
                     {
                         "linkId": "Rash-L",
                         "text": "Do you have a rash or eczema in the area of your ankle?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS24"
                         }
@@ -499,6 +510,7 @@
                     {
                         "linkId": "Ulcer-L",
                         "text": "Do you have a skin ulcer associated with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS6"
                         }
@@ -516,6 +528,7 @@
                     {
                         "linkId": "PainDays-R",
                         "text": "In the last 2 weeks for how many days did your veins cause you pain or ache?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS22"
                         }
@@ -523,6 +536,7 @@
                     {
                         "linkId": "Support-R",
                         "text": "In the last two weeks, have you worn support stockings or tights?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS25"
                         }
@@ -530,6 +544,7 @@
                     {
                         "linkId": "Itch-R",
                         "text": "In the past two weeks, have you had any itching in association with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS23"
                         }
@@ -537,6 +552,7 @@
                     {
                         "linkId": "Discolor-R",
                         "text": "Do you have purple discoloration caused by tiny blood vessels in the skin, in association with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS6"
                         }
@@ -544,6 +560,7 @@
                     {
                         "linkId": "Rash-R",
                         "text": "Do you have a rash or eczema in the area of your ankle?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS24"
                         }
@@ -551,6 +568,7 @@
                     {
                         "linkId": "Ulcer-R",
                         "text": "Do you have a skin ulcer associated with your varicose veins?",
+                        "type": "choice",
                         "options": {
                             "reference": "SMART-PROMs-VS6"
                         }

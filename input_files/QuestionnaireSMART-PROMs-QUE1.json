@@ -13,6 +13,7 @@
                 "id": "SMART-PROMs-VS1",
                 "name": "YesMissing",
                 "description": "Captures a yes or missing response",
+                "status": "draft",
                 "compose": {
                     "include": [
                         {
@@ -41,6 +42,7 @@
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS2",
                 "name": "YesNoMissing",
+                "status": "draft",
                 "compose": {
                     "include": [
                         {
@@ -126,6 +128,7 @@
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS4",
                 "name": "LivingArrangement",
+                "status": "draft",
                 "compose": {
                     "include": [
                         {
@@ -197,7 +200,7 @@
         {
             "request": {
                 "method": "PUT",
-                "url"   : "Questionnaire/SMART-PROMs-VS1"
+                "url"   : "Questionnaire/SMART-PROMs-QUE1"
             },
             "resource": {
                 "resourceType": "Questionnaire",
@@ -209,9 +212,7 @@
                         "value": "Pre-Op Q1 PROMs General Health Questionnaire"
                     }
                 ],
-
                 "status": "active",
-
                 "item": [
                     {
                         "linkId": "Assisted",
@@ -226,7 +227,7 @@
                         "linkId": "Assisted By",
                         "text": "If Yes, give the relationship to you of the person assisting you",
                         "type": "choice",
-                        "required": "false",
+                        "required": false,
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS3"
                         }

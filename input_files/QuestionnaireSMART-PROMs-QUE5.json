@@ -377,7 +377,7 @@
                         "text": "How would you describe the pain you usually have in your knee?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS13"
+                            "reference": "ValueSet/SMART-PROMs-VS13"
                         }
                     },
                     {
@@ -385,7 +385,7 @@
                         "text": "Have you been troubled by pain from your knee in bed at night?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS14"
+                            "reference": "ValueSet/SMART-PROMs-VS14"
                         }
                     },
                     {
@@ -393,7 +393,7 @@
                         "text": "Have you had any trouble with washing and drying yourself (all over) because of your knee?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS20"
+                            "reference": "ValueSet/SMART-PROMs-VS20"
                         }
                     },
                     {
@@ -401,7 +401,7 @@
                         "text": "Have you had any trouble getting in and out of a car or using public transportation because of your knee?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS20"
+                            "reference": "ValueSet/SMART-PROMs-VS20"
                         }
                     },
                     {
@@ -409,7 +409,7 @@
                         "text": "For how long have you been able to walk before the pain in your knee becomes severe (with or without a walking aid)?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS17"
+                            "reference": "ValueSet/SMART-PROMs-VS17"
                         }
                     },
                     {
@@ -417,7 +417,7 @@
                         "text": "After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your knee?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS19"
+                            "reference": "ValueSet/SMART-PROMs-VS19"
                         }
                     },
                     {
@@ -425,7 +425,7 @@
                         "text": "Have you been limping when walking because of your knee?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS16"
+                            "reference": "ValueSet/SMART-PROMs-VS16"
                         }
                     },
                     {
@@ -433,7 +433,7 @@
                         "text": "If you were to kneel down could you stand up afterwards?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS18"
+                            "reference": "ValueSet/SMART-PROMs-VS18"
                         }
                     },
                     {
@@ -441,7 +441,7 @@
                         "text": "How much has pain from your knee interfered with your usual work, including housework?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS21"
+                            "reference": "ValueSet/SMART-PROMs-VS21"
                         }
                     },
                     {
@@ -449,7 +449,7 @@
                         "text": "Have you felt that your knee might suddenly give way or let you down?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS16"
+                            "reference": "ValueSet/SMART-PROMs-VS16"
                         }
                     },
                     {
@@ -457,7 +457,7 @@
                         "text": "Could you do the household shopping on your own?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS18"
+                            "reference": "ValueSet/SMART-PROMs-VS18"
                         }
                     },
                     {
@@ -465,7 +465,7 @@
                         "text": "Have you been able to walk down a flight of stairs?",
                         "type": "choice",
                         "options": {
-                        "reference": "ValueSet/SMART-PROMs-VS18"
+                            "reference": "ValueSet/SMART-PROMs-VS18"
                         }
                     },
                     {

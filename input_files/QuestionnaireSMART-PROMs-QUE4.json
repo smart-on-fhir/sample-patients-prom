@@ -408,11 +408,11 @@
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE4",
                 "identifier": [
-                {
-                    "use": "official",
-                    "system": "https://innovation.ox.ac.uk/outcome-measures/oxford-hip-score-ohs/",
-                    "value": "The Oxford Hip Score (OHS)"
-                }
+                    {
+                        "use": "official",
+                        "system": "https://innovation.ox.ac.uk/outcome-measures/oxford-hip-score-ohs/",
+                        "value": "The Oxford Hip Score (OHS)"
+                    }
                 ],
                 "status": "active",
                 "item": [

@@ -12,6 +12,7 @@
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS6",
                 "name": "YesNoMissing",
+                "status": "draft",
                 "compose": {
                     "include": [
                         {
@@ -97,6 +98,7 @@
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS8",
                 "name": "LivingArrangement",
+                "status": "draft",
                 "compose": {
                     "include": [
                         {
@@ -248,7 +250,7 @@
                         "linkId": "Assisted By",
                         "text": "If Yes, give the relationship to you of the person assisting you",
                         "type": "choice",
-                        "required": "false",
+                        "required": false,
                         "options": {
                             "reference": "ValueSet/SMART-PROMs-VS7"
                         }
