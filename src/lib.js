@@ -4,12 +4,10 @@ const FS          = require("fs");
 const Path        = require("path");
 const CFG         = require("./config.js");
 const trxTemplate = require("./templates/Transaction.js");
-const request     = require("request");
 const EOL         = /\r\n|\n|\r/;
 const CSV_LINE    = /[^\s,]/; // matches non-empty lines
 const CSV_COMMENT = /^#/;
 const BASE        = Path.join(__dirname, "..");
-const INPUT_DIR   = Path.join(BASE, "input_files");
 
 /**
  * This is somewhat similar to the debug module mut it writes directly to STDOUT
@@ -35,7 +33,6 @@ function debugLog(msg, group="*"/*, severity="debug"*/) {
  */
 function writeFile(file, data, options={}) {
     return new Promise((resolve, reject) => {
-        // debugFS(`Writing file ${file}`);
         FS.writeFile(file, data, options, error => {
             if (error) {
                 return reject(error);
@@ -53,7 +50,6 @@ function writeFile(file, data, options={}) {
  */
 function readFile(file, options={}) {
     return new Promise((resolve, reject) => {
-        // debugFS(`Reading file ${file}`);
         FS.readFile(file, options, (error, data) => {
             if (error) {
                 return reject(error);
@@ -235,107 +231,10 @@ async function parseAllCSVFiles() {
     return out
 }
 
-function sendTransaction(trx, isLast) {
-    return new Promise((resolve, reject) => {
-        let start = Date.now()
-        debugLog(
-            (isLast ? " └" : " ├") +
-            `─ Sending POST to ${CFG.serverBaseURI} (${trx.entry[0].resource.id}) ... `,
-            "test"
-        )
-        request({
-            method: "POST",
-            uri   : CFG.serverBaseURI,
-            json  : true,
-            body  : trx,
-            proxy : CFG.proxy,
-            headers: {
-                accept: "application/json+fhir"
-            }
-        }, (error, response, body) => {
-            if (error) {
-                debugLog(`Failed!\n`.bold.red, "test")
-                return reject(error);
-            }
-            if (response.statusCode >= 400) {
-                let err = new Error(response.statusMessage)
-                err.details = body
-                err.payload = trx
-                debugLog(`Failed!\n`.bold.red, "test")
-                return reject(err);
-            }
-
-            debugLog(`OK (${Date.now() - start}ms)\n`.bold.green, "test")
-            // debugLog(body, response)
-            resolve(body)
-        })
-    })
-}
-
-function sendTransactions(structure) {
-    debugLog(`Executing ${structure.length} transactions`.bold + ":\n", "test");
-    let task = Promise.resolve()
-    let len = structure.length
-    structure.forEach((trx, i) => {
-        task = task.then(() => sendTransaction(trx, i === len - 1))
-    })
-    return task
-}
-
-function createQuestionnaires() {
-    debugLog(`Creating questionnaires:\n`.bold, "http");
-    let tasks = Promise.resolve();
-    let names = [
-        "QuestionnaireSMART-PROMs-QUE1.json",
-        "QuestionnaireSMART-PROMs-QUE2.json",
-        "QuestionnaireSMART-PROMs-QUE3.json",
-        "QuestionnaireSMART-PROMs-QUE4.json",
-        "QuestionnaireSMART-PROMs-QUE5.json",
-        "QuestionnaireSMART-PROMs-QUE6.json",
-    ];
-    let length = names.length
-    names.forEach((name, idx) => {
-        tasks = tasks.then(() => {
-            let path = Path.join(INPUT_DIR, name)
-            let trx = require(path);
-            return new Promise((resolve, reject) => {
-                debugLog(
-                    (idx === length - 1 ? " └" : " ├") +
-                    `─ Executing transaction from ${path} ... `,
-                    "http"
-                );
-                let start = Date.now();
-                request({
-                    method: "POST",
-                    uri   : CFG.serverBaseURI,
-                    json  : true,
-                    body  : trx,
-                    proxy : CFG.proxy,
-                    headers: {
-                        accept: "application/json+fhir"
-                    }
-                }, (error, response, body) => {
-                    if (error) {
-                        debugLog("Failed!\n".bold.red, "http")
-                        return reject(error);
-                    }
-                    if (response.statusCode >= 400) {
-                        debugLog("Failed!\n".bold.red, "http")
-                        let err = new Error(response.statusMessage)
-                        err.details = body
-                        err.payload = trx
-                        return reject(err);
-                    }
-                    debugLog(`OK (${Date.now() - start}ms)\n`.bold.green, "http")
-                    setTimeout(() => resolve(body), 20)
-                })
-            })
-        })
-    });
-
-    return tasks;
-}
-
+/**
+ * The main function that does everything :)
+ * @returns {Promise<Object>}
+ */
 function parse() {
     return parseAllCSVFiles()
 
@@ -371,76 +270,9 @@ function parse() {
         })
     })
     .then(structure => {
-        return createQuestionnaires()
+        return Promise.resolve()
             .then(() => writeTransactions(structure))
-            .then(transactions => sendTransactions(transactions))
             .then(() => structure)
-    })
-}
-
-// Experimental ----------------------------------------------------------------
-
-function parseCSV(csvFilePath, headerRowsCount = 0) {
-
-    // All the lines in the CSV
-    let lines = getCSVLines(csvFilePath).map(
-        line => getCSVLineCells(line)
-    );
-
-    // The output structure
-    let structure = [];
-
-    // The header rows
-    let headers = lines.slice(0, headerRowsCount);
-
-    function getHeaderLabelAt(colIndex, rowIndex = 0) {
-        let row   = headers[rowIndex]
-        let label = [row[colIndex]]
-
-        if (!label[0]) {
-            if (rowIndex) {
-                label[0] = getHeaderLabelAt(colIndex, rowIndex - 1)
-            }
-        }
-
-        else if (rowIndex) {
-            let parent = getHeaderLabelAt(colIndex, rowIndex - 1)
-            while (!parent && colIndex) {
-                parent = getHeaderLabelAt(--colIndex, rowIndex - 1)
-            }
-            label.unshift(parent)
-        }
-        return label.filter(Boolean).join(".")
-    }
-
-    headers[headerRowsCount - 1].forEach((cell, colIndex) => {
-        structure.push(getHeaderLabelAt(colIndex, headerRowsCount - 1))
-    });
-
-    // return structure
-
-    return lines.slice(headerRowsCount).map(row => {
-        let rowStructure = {}
-
-        structure.forEach((path, index) => {
-            let segments  = path.split(".")
-            let segLength = segments.length
-            let cur = rowStructure;
-            segments.forEach((key, idx) => {
-                if (idx < segLength - 1) {
-                    if (!cur.hasOwnProperty(key)) {
-                        cur[key] = {}
-                    }
-                    // else if (!Array.isArray(cur[key])) {
-                    //     cur[key] = [cur[key]]
-                    // }
-                    cur = cur[key]
-                } else {
-                    cur[key] = row[index]
-                }
-            })
-        })
-        return rowStructure
     })
 }
 
@@ -452,6 +284,5 @@ module.exports = {
     writeResources,
     writeTransactions,
     parseResourcesCsv,
-    parse,
-    parseCSV
+    parse
 };
