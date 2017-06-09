@@ -1,6 +1,4 @@
 module.exports = {
-    serverBaseURI: "http://fhirtest.uhn.ca/baseDstu3",
-    proxy: "http://proxy.tch.harvard.edu:3128",
     types : {
         Patient: {
             csvHeaders: 3,
