@@ -25,6 +25,10 @@ module.exports = data => {
     return {
         resourceType: "QuestionnaireResponse",
         id: data[0],
+        text: {
+            status: "generated",
+            div: `<div xmlns="http://www.w3.org/1999/xhtml">Questionnaire response for ${data[2]} by ${data[5]} - ${data[3].toLowerCase()}</div>`
+        },
         questionnaire: {
             reference: data[1],
             display  : data[2]

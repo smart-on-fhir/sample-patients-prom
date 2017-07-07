@@ -83,6 +83,10 @@
             "resource": {
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE2",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Questionnaire SMART-PROMs-QUE2 - Version 14DEC2016</div>"
+                },
                 "identifier": [
                     {
                         "use": "official",

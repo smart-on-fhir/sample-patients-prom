@@ -205,6 +205,10 @@
             "resource": {
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE1",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pre-Op Q1 PROMs General Health Questionnaire</div>"
+                },
                 "identifier": [
                     {
                         "use": "official",

@@ -10,6 +10,11 @@ module.exports = data => ({
     id: data[0],
     resourceType: "Procedure",
 
+    text: {
+        status: "generated",
+        div: `<div xmlns="http://www.w3.org/1999/xhtml">${data[4]} - ${data[1]}</div>`
+    },
+
     // External Identifiers for this procedure
     // identifier: [],
 

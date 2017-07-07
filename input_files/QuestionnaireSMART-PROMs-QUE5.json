@@ -363,6 +363,10 @@
             "resource": {
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE5",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Oxford Knee Score (OKS)</div>"
+                },
                 "identifier": [
                     {
                         "use": "official",

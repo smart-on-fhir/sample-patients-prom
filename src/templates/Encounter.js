@@ -2,6 +2,10 @@ module.exports = data => {
     let out = {
         resourceType: "Encounter",
         id: data[0],
+        text: {
+            status: "generated",
+            div: `<div xmlns="http://www.w3.org/1999/xhtml">${data[9]} - ${(data[1] || "unknown status").toLowerCase()}</div>`
+        },
         status: (data[1] || "").toLowerCase(),
         class: {
             code: data[2]

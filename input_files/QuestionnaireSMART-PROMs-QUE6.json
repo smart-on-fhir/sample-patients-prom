@@ -399,6 +399,10 @@
             "resource": {
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE6",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aberdeen Varicose Veins Questionnaire (AVVQ)</div>"
+                },
                 "identifier": [
                     {
                         "use": "official",

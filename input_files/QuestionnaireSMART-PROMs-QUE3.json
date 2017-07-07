@@ -228,6 +228,10 @@
             "resource": {
                 "resourceType": "Questionnaire",
                 "id": "SMART-PROMs-QUE3",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Post-Op Q2 PROMs General Health Questionnaire</div>"
+                },
                 "identifier": [
                     {
                         "use": "official",
