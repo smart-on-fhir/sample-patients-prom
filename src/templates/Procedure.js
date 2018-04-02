@@ -48,11 +48,13 @@ module.exports = data => ({
     // CodeableConcept	Identification of the procedure
     // Procedure Codes (SNOMED CT)
     code: {
-        coding: {
-            system : data[2],
-            code   : data[3],
-            display: data[4]
-        }
+        coding: [
+            {
+                system : data[2],
+                code   : data[3],
+                display: data[4]
+            }
+        ]
     },
 
     // Who the procedure was performed on

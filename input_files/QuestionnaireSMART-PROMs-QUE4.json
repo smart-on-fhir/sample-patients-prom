@@ -11,10 +11,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS13",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "NoneToSevere"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "NoneToSevere"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -55,10 +57,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS14",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "PainNights"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "PainNights"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -99,10 +103,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS15",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "PainDays"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "PainDays"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -143,10 +149,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS16",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "Limping"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "Limping"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -187,10 +195,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS17",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "Length"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "Length"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -231,10 +241,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS18",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "DifficultyLevel"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "DifficultyLevel"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -275,10 +287,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS19",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "Painful"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "Painful"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -319,10 +333,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS20",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "Trouble"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "Trouble"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
@@ -363,10 +379,12 @@
             "resource": {
                 "resourceType": "ValueSet",
                 "id": "SMART-PROMs-VS21",
-                "identifier": {
-                    "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
-                    "value": "Interference"
-                },
+                "identifier": [
+                    {
+                        "system": "http://www.orthopaedicscore.com/scorepages/oxford_hip_score.html",
+                        "value": "Interference"
+                    }
+                ],
                 "status": "draft",
                 "compose": {
                     "include": [
